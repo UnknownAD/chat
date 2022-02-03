@@ -1,0 +1,13 @@
+<script src="/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$.post("http://localhost/chat/home.php",{'msg':'hi'},function(data,status){
+
+  console.log(status);
+  c=document.createElement("div");c.innerHTML=data;
+  document.getElementsByTagName("div")[0].appendChild(c.getElementsByTagName("h")[0]);
+
+})
+})
+</script>
+<div></div>

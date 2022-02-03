@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<title>Welkome</title>
+</head>
+<script src="http://localhost/jquery.js"></script> 
+<script>
+$(document).ready(function(){
+        $(".reg").css("display","none");
+	$(".login").css("display","none");
+        $("#login").click(function(){
+
+
+		$(".reg").css("display","none");
+                $(".login").css("display","inline");
+	})
+
+        $("#reg").click(function(){
+
+
+                $(".reg").css("display","inline");
+                $(".login").css("display","none");
+        })         
+        
+})
+
+
+</script>
+<body>
+	<div class="btn"> 
+        	<button id="login">Login</button>
+ 		<button id="reg">Signup</button>
+        </div>
+        <form class="reg" action="/chat/register.php" method="POST">
+
+		<input name="username" placeholder="new username">
+		<input name="password" type="password" placeholder="new password">
+		<input name="pseudo" placeholder="nickname">
+		<button type="submit">Create your account</button>
+	</form>
+        <form class="login">
+
+                <input name="username" placeholder="username">
+                <input name="password" type="password" placeholder="password">
+
+        </form>
+</body>
